@@ -1,0 +1,1 @@
+(principal, nat64, opt nat64, opt nat64)

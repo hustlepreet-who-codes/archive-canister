@@ -1,0 +1,36 @@
+[package]
+name = "archive"
+description = "An archive canister for the ICRC-1 ledger"
+# version.workspace = true
+# authors.workspace = true
+# edition.workspace = true
+# documentation.workspace = true
+
+[dependencies]
+candid = "0.10.8"
+ciborium = "0.2.2"
+ic-base-types = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-canisters-http-types = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-cdk = "0.13.3"
+ic-cdk-macros = "0.13.3"
+ic-icrc1 = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-icrc1-tokens-u256 = { git = "https://github.com/dfinity/ic", branch = "master" , optional = true }
+ic-icrc1-tokens-u64 = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-ledger-core = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-metrics-encoder = "1"
+ic-stable-structures = "0.6.4"
+icrc-ledger-types = { git = "https://github.com/dfinity/ic", branch = "master" }
+serde = "1.0.201"
+
+[dev-dependencies]
+candid_parser = "0.1.4"
+ic-ledger-core = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-state-machine-tests = { git = "https://github.com/dfinity/ic", branch = "master" }
+ic-test-utilities-load-wasm = { git = "https://github.com/dfinity/ic", branch = "master" }
+
+[features]
+default = []
+u256-tokens = ["dep:ic-icrc1-tokens-u256"]
+
+
+# |> |> 
